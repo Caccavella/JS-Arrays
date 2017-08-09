@@ -3,7 +3,10 @@
 
 var arr = [10,20,30];
 //Create a function named 'first' that is given 'arr' as the argument and  returns the first item in the given array.
-
+function first(anyArray){
+ return arr.shift
+}
+first(arr);
   //Code Here
 
 
@@ -14,7 +17,10 @@ var arr = [10,20,30];
 var arr = [40,50,60];
 //Create a function named 'last' that is given 'arr' as the argument and returns the last item in the given array.
 
-
+function last (arr) {
+  var la = arr.pop
+}
+return la;
   //Code Here
 
 
@@ -23,7 +29,11 @@ var arr = [40,50,60];
 
 var family = ['Tyler', 'Jordyn', 'Ryan', 'Chelsey', 'Ireland'];
 //Create a function named 'looper' that is given family as it's only argument, loops through the given array, and alerts every item in the array.
-
+function looper(family){
+  for (var i = 0; i < family.length; i++) {
+    alert(family[i]);
+  }
+}
   //Code Here
 
 
@@ -32,8 +42,13 @@ var family = ['Tyler', 'Jordyn', 'Ryan', 'Chelsey', 'Ireland'];
 
 
 var letters = ['A', 'B', 'C', 'D', 'E'];
-//Write a function called reversedLooper that is given letters as it's only argument and loops through the given array backwards alerting every item in the array starting at the end.
-
+//Write a function called reversedLooper that is given letters as it's only argument and loops through the given array backwards 
+//alerting every item in the array starting at the end.
+function reversedLooper(letters) {
+ for (let i = letters.length - 1; i >= 0; i--) {
+alert(letters());
+  }
+}
   //Code Here
 
 
@@ -42,7 +57,10 @@ var letters = ['A', 'B', 'C', 'D', 'E'];
 
 var nums = [1,2,3,6,22,98,45,23,22,12];
 //Write a function named evenFinder that is given nums as it's only argument and removes all values that aren't even from the given array.
-
+function evenFinder(nums) {
+  if (!nums%2 === 0)
+  
+}
   //Code Here
 
 
