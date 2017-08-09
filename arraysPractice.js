@@ -4,7 +4,7 @@
 var arr = [10,20,30];
 //Create a function named 'first' that is given 'arr' as the argument and  returns the first item in the given array.
 function first(anyArray){
- return arr.shift
+ return anyArray.shift()
 }
 first(arr);
   //Code Here
@@ -17,10 +17,11 @@ first(arr);
 var arr = [40,50,60];
 //Create a function named 'last' that is given 'arr' as the argument and returns the last item in the given array.
 
-function last (arr) {
-  var la = arr.pop
+function last (array) {
+  var la = array.pop();
+  return la;
 }
-return la;
+last(arr);
   //Code Here
 
 
@@ -29,11 +30,12 @@ return la;
 
 var family = ['Tyler', 'Jordyn', 'Ryan', 'Chelsey', 'Ireland'];
 //Create a function named 'looper' that is given family as it's only argument, loops through the given array, and alerts every item in the array.
-function looper(family){
-  for (var i = 0; i < family.length; i++) {
-    alert(family[i]);
+function looper(arr){
+  for (var i = 0; i < arr.length; i++) {
+    alert(arr[i]);
   }
 }
+looper(family);
   //Code Here
 
 
@@ -44,11 +46,12 @@ function looper(family){
 var letters = ['A', 'B', 'C', 'D', 'E'];
 //Write a function called reversedLooper that is given letters as it's only argument and loops through the given array backwards 
 //alerting every item in the array starting at the end.
-function reversedLooper(letters) {
- for (let i = letters.length - 1; i >= 0; i--) {
-alert(letters());
+function reversedLooper(code) {
+ for (let i = code.length - 1; i >= 0; i--) {
+alert(code[i]);
   }
 }
+reversedLooper(letters);
   //Code Here
 
 
