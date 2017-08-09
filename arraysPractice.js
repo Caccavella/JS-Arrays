@@ -60,10 +60,14 @@ reversedLooper(letters);
 
 var nums = [1,2,3,6,22,98,45,23,22,12];
 //Write a function named evenFinder that is given nums as it's only argument and removes all values that aren't even from the given array.
-function evenFinder(nums) {
-  if (!nums%2 === 0)
-  
+function evenFinder(thisArray) {
+  for (var i = 0; i < thisArray.length; i++)
+  while (thisArray[i] % 2 ) {
+    thisArray.splice(i, 1);
+  }
+  return thisArray;
 }
+evenFinder(nums);
   //Code Here
 
 
@@ -72,26 +76,49 @@ function evenFinder(nums) {
 
 var numbersArray = [1,2,34,54,55,34,32,11,19,17,54,66,13];
 //Write a function called divider that is given one argument, numbersArray.
-//Have divider return an Array with the first item in the array being the evens array (all the even values from numbersArray) and the second item in the Array being the odds array (all the odd values from numbersArray).
+//Have divider return an Array with the first item in the array being the evens array (all the even values from numbersArray) 
+//and the second item in the Array being the odds array (all the odd values from numbersArray).
+function divider(againArray) {
+     var rv = [];
+     var nv = [];
+    for (let i = 0; i < againArray.length; i++) {
+        if (! (againArray[i] % 2)) {
+            rv.push(againArray[i]);
+        }
+    }
+     for (var i = 0; i < againArray.length; i++) {
+        if ((againArray[i] % 2)) {
+            nv.push(againArray[i]);
+        }
+    }
+    console.log(rv, nv);
+}
+divider(numbersArray);
+//code here
 
-
-
-  //Code Here
-
-
-//Next Problem
+//next problem
 
 
 var getRandomArbitrary = function() {
   return Math.floor(Math.random() * 30);
 };
-// var numbers = [0,3,4,5,6,7,9,14,17,24,25,26,29,30];
-//Above you're given a function that will return a random number between 0 and 30.  There is also a commented out array full of numbers to help you visualize what your function will be receiving.
+ var numbers = [0,3,4,5,6,7,9,14,17,24,25,26,29,30];
+//Above you're given a function that will return a random number between 0 and 30. 
+// There is also a commented out array full of numbers to help you visualize what your function will be receiving.
 
-// Your job is to write a function named finder that will get a random number (by invoking getRandomArbitrary), then loop through the array (that will be passed in as a parameter) to see if that random number is in the array. If it is, return true, if it's not, return false
+// Your job is to write a function named finder that will get a random number (by invoking getRandomArbitrary), 
+//then loop through the array (that will be passed in as a parameter) to see if that random number is in the array. If it is, return true, if it's not, return false
 
-  //Code Here
-
+function finder(array) {
+var a = getRandomArbitrary();
+for (let i = 0; i < array.length; i++)
+ if (a == array[i]) {
+   return 'true';
+ } else {
+   return 'false';
+ }
+}  //Code Here
+finder(numbers);
   //Code Here
 
 
@@ -101,7 +128,10 @@ var getRandomArbitrary = function() {
 
 var str = 'this is my sentence';
 //Write a function called reverse that takes a given str as it's only argument and returns that string after it's been reversed
-
+function reverse(newString) {
+  return newString.split("").reverse().join("");
+}
+reverse(str);
   //Code Here
 
 
@@ -121,7 +151,8 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
   and the second is an item to add to your grocery list. In addItem add the item you passed in to
   myGroceryList then return the new, updated grocery list.
 
-  In both the removeItem function and the addItem function, you will also need to check for valid aurguments. Specrunner will try to call your functions without passing in valid aurguments. When this happens, you will need to respond by returning an empty array.
+  In both the removeItem function and the addItem function, you will also need to check for valid aurguments. 
+  Specrunner will try to call your functions without passing in valid aurguments. When this happens, you will need to respond by returning an empty array.
 */
 
   //Code Here
@@ -147,7 +178,11 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 var numbers = [5, '9', 16, 19, '25', '34', 48];
 //Write a function called addTen that is given 'numbers' as it's only argument and returns a new
 //array after adding ten to each item in numbers. *Verify your answer is correct. --> [15, 19, 26, 29, 35, 44, 58]
-
+function addTen(newNum) {
+for (let i = 0; i < newNum.length; i++)
+   console.log (Number(newNum[i] + 10));
+}
+addTen(numbers);
   //Code Here
 
 
