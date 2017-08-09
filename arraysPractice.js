@@ -204,7 +204,13 @@ for(var i = 0; i < num2; i++){
 //Above is some code that adds a random number of values to both arr1 and arr2.
 //Write a function called 'longer' that is given arr1 and arr2 as it's only arguments. Return the array which is longest.
 
-  //Code Here
+function longer(array1, array2) {
+ if (array1.lenth > array2.length) {
+   return array1;
+ } else {
+   return array2;
+ }
+}  //Code Here
 
 
 /*As a continuation of the previous problem, write another function called 'both'.
@@ -212,7 +218,15 @@ for(var i = 0; i < num2; i++){
   'both' should return a new array with the matching numbers found in both arr1 and arr2.
   Example: var arr1 = [1,2,3,4]; var arr2 = [2,4,5,6]; newArray // [2,4]
 */
+function both(array1, array2) {
+  var arr3 = [];
+  for (var i = 0; i < array1.length; i++)
+    for (var j = 0; j < array2.length; i++)
+      if (array1[i] === array2[j]) {
+        arr3.push();
+      }
 
+}
   //Code Here
 
 
